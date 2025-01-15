@@ -4,13 +4,13 @@ FROM python:3.12
 # then arm machines will have issues
 ENV PYTHONUNBUFFERED 1
 # to prevent run as root
-ARG DOCKER_HOME="/opt/yijunx"
-ARG DOCKER_CODE="/opt/yijunx/code"
-ARG DOCKER_GROUP="yijunx"
-ARG DOCKER_USER="yijunx"
+ARG DOCKER_HOME="/opt/wangyilong"
+ARG DOCKER_CODE="/opt/wangyilong/code"
+ARG DOCKER_GROUP="wangyilong"
+ARG DOCKER_USER="wangyilong"
 ARG DOCKER_UID=5000
 
-ENV ZSH="/opt/yijunx/.oh-my-zsh"
+ENV ZSH="/opt/wangyilong/.oh-my-zsh"
 
 WORKDIR ${DOCKER_CODE}
 
@@ -45,7 +45,7 @@ RUN mkdir ${DOCKER_HOME}/.ssh && \
     chown -R ${DOCKER_USER} ${DOCKER_HOME}/.ssh && \
     ssh-keyscan github.com >> ${DOCKER_HOME}/.ssh/known_hosts
 
-ENV PATH "$PATH:/opt/yijunx/.local/bin"
+ENV PATH "$PATH:/opt/wangyilong/.local/bin"
 ENV PYTHONPATH=.
 
 USER ${DOCKER_USER}

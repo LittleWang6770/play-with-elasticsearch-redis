@@ -2,7 +2,7 @@
 	"name": "play-with-elasticsearch-redis",  // change the name here
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
-	"workspaceFolder": "/opt/yijunx/code",
+	"workspaceFolder": "/opt/wangyilong/code",
 	"customizations": {
 		"vscode": {
 			"settings": {
@@ -15,10 +15,10 @@
 			},
 			"extensions": [
 				"ms-python.python",
-				"ms-python.vscode-pylance",
+				"ms-python.vscode-pylance"
 			]
 		}
 	},
 	"postCreateCommand": "poetry install --with dev",
-	"remoteUser": "yijunx"
+	"remoteUser": "wangyilong"
 }
